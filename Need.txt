@@ -1,0 +1,2 @@
+1.Set-ExecutionPolicy Unrestricted
+2.Ctrl + Shift + P
