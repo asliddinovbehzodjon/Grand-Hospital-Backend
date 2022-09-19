@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = [
-    
+    'https://grandhospital.netlify.app',
     "http://localhost:8080",
     "http://127.0.0.1:8080",
 ]
