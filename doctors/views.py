@@ -4,7 +4,7 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 # Create your views here.
 class CustomeBasicPagination(PageNumberPagination):
-    page_size = 6
+    page_size = 8
 
     def get_paginated_response(self, data):
         return Response({
