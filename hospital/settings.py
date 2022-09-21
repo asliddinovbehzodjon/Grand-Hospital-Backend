@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y6^fhd2g7a_#y4ac4+r&u*&@ugla5f1#9t4+hnzx81sg3qqll_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     "corsheaders",
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -102,7 +103,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+AWS_ACCESS_KEY_ID = 'AKIASRH3DZVZHRPSLPEJ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'grandhospital'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AUTH_USER_MODEL = 'Client.User'
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
